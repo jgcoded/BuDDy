@@ -12,6 +12,7 @@ set(BUDDY_ROOT_DIR ${CMAKE_CURRENT_LIST_DIR})
 
 add_subdirectory(src)
 
-option(BUDDY_BUILD_EXAMPLES "Build BuDDy Examples" OFF)
-
-add_subdirectory(examples)
+option(BUDDY_BUILD_EXAMPLES "Build BuDDy Examples" ON)
+if(BUDDY_BUILD_EXAMPLES)
+  add_subdirectory(examples)
+endif()
